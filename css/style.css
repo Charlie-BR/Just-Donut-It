@@ -32,8 +32,8 @@ form, form input {
 }
 iframe{
   text-align: left;
-  max-height: 300px;
-  max-width: 400px;
+  max-height: 250px;
+  max-width: 350px;
 }
 form input[type=text], form input[type=submit], form select {
   font-size: 1rem;
@@ -61,5 +61,7 @@ form input[type=submit]:hover{
 ul {
   text-align: left;
   max-width: 300px;
-  margin: 2rem auto;
+  margin-top:50px;
+  background-color: white;
+  opacity: .5;
 }
