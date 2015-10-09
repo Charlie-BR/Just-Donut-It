@@ -7,7 +7,10 @@ body {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
-  background: #81e7db;
+  background-image: url(http://deltaskymag.com/getattachment/8db4e66c-cc1d-4990-b481-2f62d70f916b);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 h1 {
@@ -17,17 +20,21 @@ h1 {
   text-shadow: 3px 0px 2px rgba(0,0,125,0.24), 0px 2px 5px rgba(255,255,255,0.7);
 }
 
-h1:before {
+/*h1:before {
   content: "The ";
   font-size: 1.8rem;
   margin: 2rem 0 -1rem 0;
   display: block;
-}
+}*/
 
 form, form input {
   font-size: 1rem;
 }
-
+iframe{
+  text-align: left;
+  max-height: 300px;
+  max-width: 400px;
+}
 form input[type=text], form input[type=submit], form select {
   font-size: 1rem;
   border: 1px solid #66ccbd;

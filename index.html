@@ -3,24 +3,41 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>The Doughnut Shop</title>
+        <title>Voodoo Donuts</title>
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="js/app.js"></script>
     </head>
     <body>
-      <h1>Doughnut Shop</h1>
-      <form id="new-doughnut">
-        <input type="text" name='doughnut[flavor]' id="doughnut-flavor" placeholder="What type of doughnut?" value="Chocolate">
-        <select name="doughnut[style]" id="doughnut-style">
-            <option value="Old Fashioned">Old Fashioned</option>
-            <option value="Cake">Cake</option>
-            <option value="French Cruller">French Cruller</option>
-            <option value="Yeast">Yeast</option>
-        </select>
-        <input type="submit" class="button-submit" value='Save My Doughnut'>
-      </form>
+      <h1>Voodoo Donuts</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d53785372.827773586!2d-125.54015831616867!3d34.634528610781025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1svoodoo+doughnut!5e0!3m2!1sen!2sus!4v1444422144147" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="col-xs-6">
+                    <form id="new-doughnut">
+            <input type="text" name='doughnut[flavor]' id="doughnut-flavor" placeholder="What type of doughnut?" value="Chocolate">
+            <select name="doughnut[style]" id="doughnut-style">
+                <option value="Old Fashioned">Old Fashioned</option>
+                <option value="Cake">Cake</option>
+                <option value="French Cruller">French Cruller</option>
+                <option value="Yeast">Yeast</option>
+            </select>
+            <input type="button" class="button-submit" value='Do That Voodoo'>
+          </form>
+                </div>
+            </div>
+        </div>
+      <div class="col-md-6">
+        
+      </div>
+      <div class="col-md-6">
+        
+      </div>
+      <ul id="doughnuts">
+      </ul>    
+     </container>
     </body>
-    <ul id="doughnuts">
-    </ul>
 </html>
