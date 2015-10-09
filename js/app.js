@@ -1,26 +1,37 @@
 $(function() {
-  $.ajax({
-    		url: 'http://api.doughnuts.ga/doughnuts'
-    		method: 'GET',
-    		dataType: 'json',
-    		data: {
-    			id: $('id').val();
-                style: $('style').val();
-                flavor: $('flavor').val();
-    			}
+
+    var donut_api = "http://api.doughnuts.ga/doughnuts"
+    var flavor_val = $('#doughnut-flavor').val();
+    var style_val = $('#doughnut-style').val();
+
+    $('.button-submit').on('click', function () { 
+      $.ajax({
+    	    url: donut_api
+    		dataType: 'jsonp',
+            method: 'POST',
     		},
-                success: function(data, textStatus, jqXHR) {
-                $("#results").html('');
-                    for (var i = 0; i < data['Search'].length; i++) {
-                    $("#results").append("<li>"+ data['Search'][i]['Title'] + ", " + data['Search'][i]['Year'] +"</li>")
-        }
-    		fail: function(err) {
+            
+            success: function(data) {
+              $("#doughnuts").append("<li>"+ flavor_val +" which is a " style_val "donut"+"</li>")
+            }
+    		
+            fail: function(err) {
     			console.log('fail!');
     			console.log(err);
     		},
-    		always: function() {
-    			console.log('i always happen');
-    		}
-    	});
-});
+      });
+    }); //
+
+    $.ajax({
+            url: donut_api
+            dataType: 'jsonp',
+            method: 'GET',
+            
+            success: function(data) {
+            for (var i=0; i < data.length; i++) {
+              $("#doughnuts").append("<li>"+ data[i]['id']+data[i]['flavor']+data[i]['style']+"</li>")
+                }
+            }
+    });
+});    
 
